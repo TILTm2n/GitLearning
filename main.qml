@@ -32,6 +32,7 @@ Window {
                 anchors.right: parent.right
 
                 ColumnLayout{
+                    id: _firstContainer
                     Layout.fillWidth: true
                     Layout.alignment: Qt.AlignTop
                     spacing: 0

@@ -32,7 +32,6 @@ Window {
                 anchors.right: parent.right
 
                 ColumnLayout{
-                    id: _firstContainer
                     Layout.fillWidth: true
                     Layout.alignment: Qt.AlignTop
                     spacing: 0
@@ -40,7 +39,7 @@ Window {
                     Rectangle{
                         Layout.fillWidth: true
                         height: 25
-                        color: "blue"
+                        color: "#C7D4A0"
 
                         TextInput{
                             id: _txtinput
@@ -48,7 +47,7 @@ Window {
                             clip: true
                             padding: 4
                             text: "input1"
-                            color: "yellow"
+                            color: "black"
 
                             onTextEdited: {
                                 //_txtToInput.text = _txtinput.text
@@ -66,36 +65,23 @@ Window {
                             width: parent.width
                             height: _lvCB1.height
                             closePolicy: Popup.NoAutoClose
-                            padding: 0
-                            horizontalPadding: 10
 
 
                             ListView {
                                 id: _lvCB1
                                 model: ContactModel {}
-                                //width: parent.width - работает и без него
+                                width: parent.width
                                 orientation: Qt.Vertical
                                 height: contentHeight
 
                                 delegate: Component {
                                     Rectangle {
-                                        height: 20
+                                        height: 10
                                         Text {
                                             id: _txtToInput
                                             text: name
-
-                                            MouseArea{
-                                                anchors.fill: parent
-                                                onClicked: {
-                                                    console.log(_txtToInput.text)
-                                                }
-                                            }
                                         }
                                     }
-                                }
-
-                                onFlickStarted:{
-                                    console.log("flic")
                                 }
                             }
                         }
@@ -110,14 +96,14 @@ Window {
                     Rectangle{
                         Layout.fillWidth: true
                         height: 25
-                        color: "green"
+                        color: "#C7D4A0"
 
                         TextInput{
                             id: _txtinput1
                             anchors.fill: parent
                             clip: true
                             padding: 4
-                            color: "yellow"
+                            color: "black"
                             text: "input2"
                         }
                     }
@@ -131,14 +117,14 @@ Window {
                     Rectangle{
                         Layout.fillWidth: true
                         height: 25
-                        color: "yellow"
+                        color: "#C7D4A0"
 
                         TextInput{
                             id: _txtinput2
                             anchors.fill: parent
                             clip: true
                             padding: 4
-                            color: "green"
+                            color: "black"
                             text: "input3"
                         }
                     }
